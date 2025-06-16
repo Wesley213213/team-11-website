@@ -1,153 +1,151 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Customer Testimonials | Coltivare</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Testimonials - Coltivare</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f4f9f4;
-      color: #2e5c2e;
+      background-color: #f4f8ee;
+      color: #2c4b2a;
       margin: 0;
       padding: 0;
-      text-align: center;
     }
 
-    .header-image {
-      background-image: url('grassfarm.jpg');
+    .testimonial-title {
+      text-align: left;
+      padding: 30px 40px 0;
+      font-size: 2rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    .testimonial-header-bg {
+      background-image: url("grassfarm.jpg");
       background-size: cover;
       background-position: center;
-      padding: 80px 0;
-      color: white;
-      font-size: 2em;
-      font-weight: bold;
+      padding: 40px 0;
     }
 
     .subheading {
+      text-align: center;
       font-style: italic;
-      margin: 20px;
+      margin: 20px auto 0;
     }
 
-    h1 {
-      color: #2e5c2e;
-      margin-bottom: 5px;
-    }
-
-    .testimonials-title {
-      font-size: 1.8em;
-      margin-top: 30px;
-      color: #2e5c2e;
+    h2 {
+      text-align: center;
+      margin: 10px auto 30px;
+      color: #2c4b2a;
       text-decoration: underline;
-      font-weight: bold;
     }
 
-    .testimonial-container {
+    .testimonial-grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      background-image: url("grassfarm.jpg");
+      background-size: cover;
+      background-position: center;
+      padding: 40px 20px;
       gap: 20px;
-      padding: 30px;
     }
 
     .testimonial {
-      background-color: #fff;
-      border: 2px solid #2e5c2e;
-      border-radius: 6px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      background-color: white;
+      border: 1px solid #2c4b2a;
+      border-radius: 8px;
       padding: 20px;
       width: 300px;
-      font-style: italic;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     }
 
-    .quote strong {
-      color: #cc6000;
+    .testimonial em {
+      display: block;
+      margin-top: 10px;
     }
 
-    .highlight {
-      color: #cc0000;
-      font-weight: bold;
-    }
-
-    .links {
-      margin: 40px auto 20px;
-    }
-
-    .info-section {
+    .footer-section {
       display: flex;
       justify-content: center;
       gap: 100px;
       margin-top: 40px;
     }
 
-    .info-section div {
-      text-align: left;
+    .footer-section ul {
+      list-style-type: disc;
+      padding-left: 20px;
     }
 
-    .info-section h2 {
-      font-size: 1.2em;
-      color: #2e5c2e;
-    }
-
-    a {
-      color: #cc4000;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
+    .footer-section h3 {
+      font-size: 1.1rem;
     }
 
     .footer {
-      margin-top: 20px;
-      font-style: italic;
-      font-size: 0.9em;
+      text-align: center;
+      font-size: 0.9rem;
+      margin: 40px 0;
+    }
+
+    a {
+      color: #c74700;
     }
   </style>
 </head>
 <body>
-  <div class="header-image">What Our Customers Say</div>
+
+  <div class="testimonial-header-bg">
+    <h1 class="testimonial-title">What Our Customers Say</h1>
+  </div>
 
   <p class="subheading">See how real growers are thriving with Coltivare’s support and products.</p>
+  <h2>Testimonials</h2>
 
-  <div class="testimonials-title">Testimonials</div>
+  <div class="testimonial-grid">
+    <div class="testimonial">
+      <p><strong style="color:#d24700">Coltivare’s fertilizers</strong> boosted my soybean yields by 35%!”</p>
+      <em>– Sarah M., Indiana Farmer</em>
+    </div>
 
-  <div class="testimonial-container">
     <div class="testimonial">
-      <p class="quote"><strong>Coltivare’s fertilizers</strong> boosted my soybean yields by 35%!”</p>
-      <p>– <em>Sarah M., Indiana Farmer</em></p>
+      <p><em>Their customer support is second to none. I felt like a partner, not just a customer.”</em></p>
+      <em>– Luis R., Corn Grower</em>
     </div>
+
     <div class="testimonial">
-      <p class="quote">“Their customer support is second to none. I felt like a partner, not just a customer.”</p>
-      <p>– <em>Luis R., Corn Grower</em></p>
+      <p>“The drip-irrigation kit cut water use <strong style="color:#d24700">in half</strong> on my family farm.”</p>
+      <em>– Jose A., Vegetable Producer</em>
     </div>
+
     <div class="testimonial">
-      <p class="quote">“The drip-irrigation kit cut water use <strong>in half</strong> on my family farm.”</p>
-      <p>– <em>Jose A., Vegetable Producer</em></p>
+      <p><strong style="color:#d24700">Fast shipping</strong> and quality tools—exactly what a co-op needs.”</p>
+      <em>– Emily K., Agri-Co-op Manager</em>
     </div>
+
     <div class="testimonial">
-      <p class="quote">“<a href="#">Fast shipping</a> and quality tools—exactly what a co-op needs.”</p>
-      <p>– <em>Emily K., Agri-Co-op Manager</em></p>
+      <p><em>Affordable and effective. Their team knows what farmers actually need.”</em></p>
+      <em>– Robert J., Midwest Soy Producer</em>
     </div>
+
     <div class="testimonial">
-      <p class="quote">“Affordable and effective. Their team knows what farmers actually need.”</p>
-      <p>– <em>Robert J., Midwest Soy Producer</em></p>
-    </div>
-    <div class="testimonial">
-      <p class="quote">“We’ve seen better crop performance and fewer issues since switching to Coltivare.”</p>
-      <p>– <em>Dana S., Organic Grower</em></p>
+      <p><em>We’ve seen better crop performance and fewer issues since switching to Coltivare.”</em></p>
+      <em>– Dana S., Organic Grower</em>
     </div>
   </div>
 
-  <div class="info-section">
+  <div class="footer-section">
     <div>
-      <h2>Why farmers love us:</h2>
-      <ol>
+      <h3>Why farmers love us:</h3>
+      <ul>
         <li>Personalized support</li>
         <li>High-performance products</li>
         <li>Fast and reliable shipping</li>
-      </ol>
+      </ul>
     </div>
+
     <div>
-      <h2>Types of customers we serve:</h2>
+      <h3>Types of customers we serve:</h3>
       <ul>
         <li>Family farms</li>
         <li>Commercial growers</li>
@@ -157,12 +155,12 @@
     </div>
   </div>
 
-  <div class="links">
-    <p>Visit our partner: <a href="#">Johnny's Selected Seeds</a></p>
+  <div class="footer">
+    <p>Visit our partner: <a href="#">Johnny’s Selected Seeds</a></p>
     <p><a href="#">Contact us</a> if you have questions!</p>
-    <p><a href="info_sheet.pdf" download>Download info sheet</a></p>
+    <p><a href="coltivare-info.jpg" download>Download info sheet</a></p>
+    <p><em>Last modified: 06/15/2025 19:59:00</em></p>
   </div>
 
-  <p class="footer">Last modified: 06/15/2025 18:59:00</p>
 </body>
 </html>
