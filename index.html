@@ -1,91 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Coltivare Homepage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coltivare - Home</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f8ed;
       margin: 0;
-      padding: 0;
-      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: #f3f6ea;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: #f5f7f0;
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+      height: 100vh;
+    }
+
+    .sidebar h2,
+    .sidebar strong,
+    .sidebar em {
+      font-size: 16px;
+      color: #333;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .sidebar ul li {
+      margin: 5px 0;
+    }
+
+    .sidebar a {
+      color: #165016;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .content {
+      flex: 1;
     }
 
     .hero {
-      background-image: url("grassfarm.jpg");
+      background-image: url("farmeve.jpg");
       background-size: cover;
       background-position: center;
-      padding: 100px 20px 40px;
       color: white;
+      text-align: center;
+      padding: 60px 0;
     }
 
     .hero h1 {
-      font-size: 3em;
       margin: 0;
+      font-size: 48px;
       font-weight: bold;
     }
 
     .hero h2 {
-      font-size: 1.5em;
-      margin: 10px 0 0;
-      font-weight: 500;
+      margin-top: 10px;
+      font-size: 24px;
     }
 
     nav {
-      background-color: #e9f0db;
+      background-color: #e6eed8;
+      display: flex;
+      justify-content: center;
       padding: 10px 0;
-    }
-
-    nav a {
-      margin: 0 15px;
-      color: #2d5529;
-      text-decoration: none;
       font-weight: bold;
     }
 
-    .content {
-      padding: 30px 20px;
-      max-width: 800px;
-      margin: 0 auto;
-      color: #2f2f2f;
+    nav a {
+      color: #165016;
+      text-decoration: none;
+      margin: 0 15px;
     }
 
-    .content p {
-      font-size: 1.1em;
-      line-height: 1.6em;
+    .main-section {
+      padding: 40px;
+      text-align: center;
     }
 
-    .last-modified {
+    .main-section strong {
+      font-size: 18px;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #333;
       margin-top: 40px;
-      font-style: italic;
-      font-size: 0.9em;
-      color: #555;
+      padding-bottom: 20px;
     }
   </style>
 </head>
+
 <body>
-  <div class="hero">
-    <h1>Coltivare</h1>
-    <h2>Team 11 – Purdue University</h2>
-  </div>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="story.html">Story & History</a>
-    <a href="management.html">Management Team</a>
-    <a href="products.html">Products</a>
-    <a href="services.html">Services</a>
-    <a href="testimonials.html">Testimonials</a>
-  </nav>
-
-  <div class="content">
-    <p><strong>Coltivare</strong> empowers growers with innovative, sustainable agricultural solutions that boost yields, protect natural resources, and support thriving rural communities.</p>
-
-    <p>This website gives you a complete tour of our company, including our history, leadership, product line, service offerings, and real-world success stories from producers who trust Coltivare.</p>
-
-    <div class="last-modified">Last modified: 06/15/2025 19:56:06</div>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Pages</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="story.html">Story & History</a></li>
+        <li><a href="team.html">Management Team</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+      </ul>
+      <hr />
+      <div>
+        <strong>Team Coltivare</strong>
+        <p><strong>Team #: </strong>11</p>
+        <p><strong>Members:</strong></p>
+        <ul>
+          <li>Morales, Wes</li>
+          <li>Osuntokun, Mide</li>
+          <li>Pike, Cooper</li>
+          <li>Pulaski, Christopher</li>
+        </ul>
+        <em>Last Modified:</em>
+        <br />06/15/2025 19:56:06
+      </div>
+    </aside>
+    <div class="content">
+      <header class="hero">
+        <h1>Coltivare</h1>
+        <h2>Team 11 – Purdue University</h2>
+      </header>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="story.html">Story & History</a>
+        <a href="team.html">Management Team</a>
+        <a href="products.html">Products</a>
+        <a href="services.html">Services</a>
+        <a href="testimonials.html">Testimonials</a>
+      </nav>
+      <div class="main-section">
+        <p><strong>Coltivare</strong> empowers growers with innovative, sustainable agricultural solutions that boost yields, protect natural resources, and support thriving rural communities.</p>
+        <p>This website gives you a complete tour of our company, including our history, leadership, product line, service offerings, and real-world success stories from producers who trust Coltivare.</p>
+        <p class="footer"><em>Last modified: 06/15/2025 19:56:06</em></p>
+      </div>
+    </div>
   </div>
 </body>
+
 </html>
