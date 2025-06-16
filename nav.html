@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Navigation – Coltivare Team 11</title>
+  <style>
+    /* --- COLORS & FONTS --- */
+    :root {
+      --sage: #f3f8eb;          /* very light green background */
+      --green: #164714;         /* dark forest-green text */
+      --green-light: #1e6419;   /* hover & active */
+      --border: #c6d8b5;
+      --accent: #e75b10;        /* orange for visited / optional */
+      --body-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--body-font);
+      background: var(--sage);
+      color: var(--green);
+    }
+
+    /* --- SIDEBAR LAYOUT --- */
+    #wrapper {
+      width: 190px;          /* matches your <frameset cols="200,*">  */
+      padding: 15px 10px 25px;
+      border-right: 2px solid var(--border);
+      box-sizing: border-box;
+      line-height: 1.35;
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      margin: 1.2rem 0 0.2rem;
+      font-weight: 700;
+    }
+
+    /* --- LINK STYLING --- */
+    nav ul {
+      padding-left: 0;
+      margin-top: 0;
+      list-style: none;
+    }
+    nav a {
+      display: block;
+      padding: 4px 0;
+      color: var(--green);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    nav a:hover,
+    nav a:focus {
+      color: var(--green-light);
+      text-decoration: underline;
+    }
+
+    /* --- TEAM FOOTER --- */
+    #team-box {
+      border-top: 2px solid var(--border);
+      margin-top: 1rem;
+      padding-top: 1rem;
+      font-size: 0.84rem;
+    }
+    #team-box ul {
+      margin: 0.4rem 0 0;
+      padding-left: 18px;     /* keep bullets neatly indented */
+    }
+    #team-box li {
+      margin: 0;
+      padding: 1px 0;
+    }
+    #modified {
+      margin-top: 1rem;
+      font-style: italic;
+      font-size: 0.78rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrapper">
+    <!-- MAIN PAGE LINKS -->
+    <nav>
+      <ul>
+        <li><a href="index.html"        target="showframe">Home</a></li>
+        <li><a href="story.html"        target="showframe">Story & History</a></li>
+        <li><a href="management.html"   target="showframe">Management Team</a></li>
+        <li><a href="products.html"     target="showframe">Products</a></li>
+        <li><a href="services.html"     target="showframe">Services</a></li>
+        <li><a href="testimonials.html" target="showframe">Testimonials</a></li>
+      </ul>
+    </nav>
+
+    <!-- TEAM DETAILS -->
+    <div id="team-box">
+      <strong>Team Coltivare</strong><br />
+      Team #: 11
+      <h2>Members:</h2>
+      <ul>
+        <li>Morales, Wes</li>
+        <li>Osuntokun, Mide</li>
+        <li>Pike, Cooper</li>
+        <li>Pulaski, Christopher</li>
+      </ul>
+
+      <div id="modified">
+        Last Modified:<br />
+        <script>
+          document.write(document.lastModified);
+        </script>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
