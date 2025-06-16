@@ -2,183 +2,230 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Coltivare - Management Team</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Management Team – Coltivare</title>
+
+  <!-- === PAGE-LEVEL STYLES (reuse across pages if you like) === -->
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f5f8ef;
-      color: #1b3a0f;
+    /* --- overall page --- */
+    body{
+      margin:0;
+      font-family:Arial,Helvetica,sans-serif;
+      background:#f5f8ef;
+      color:#1b3a0f;
     }
+    a{color:#165016;text-decoration:none;font-weight:bold;}
+    a:hover{text-decoration:underline;}
 
-    .container {
-      display: flex;
+    /* --- shell: sidebar + page content --- */
+    .wrapper{display:flex;}
+    /* sidebar */
+    aside{
+      width:230px;
+      background:#f5f7f0;
+      padding:20px;
+      border-right:1px solid #d8e2c9;
+      box-sizing:border-box;
+      min-height:100vh;
     }
+    aside h2{margin:0 0 10px;font-size:20px;color:#1b3a0f;}
+    aside ul{list-style:none;padding-left:0;margin:0 0 20px;}
+    aside ul li{margin:6px 0;}
+    aside em,aside strong{display:block;font-size:13px;color:#333;margin-top:20px;}
+    aside ul.team-list{margin-top:5px; font-size:13px;}
+    aside ul.team-list li{font-weight:normal;}
 
-    .sidebar {
-      width: 250px;
-      background-color: #f5f7f0;
-      padding: 20px;
-      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-      height: 100vh;
+    /* content column */
+    .content{flex:1;}
+
+    /* banner / hero */
+    .hero{
+      background:url("grassfarm.jpg") center/cover no-repeat;
+      color:#fff;
+      text-align:center;
+      padding:60px 20px 80px;
     }
+    .hero h1{margin:0;font-size:48px;font-weight:bold;}
+    .hero h2{margin:10px 0 0;font-size:24px;}
 
-    .sidebar h2,
-    .sidebar strong,
-    .sidebar em {
-      font-size: 16px;
-      color: #333;
+    /* nav bar */
+    nav{
+      background:#e6eed8;
+      display:flex;
+      justify-content:center;
+      gap:28px;
+      padding:12px 10px;
+      font-weight:bold;
     }
+    nav a{color:#165016;}
 
-    .sidebar ul {
-      list-style: none;
-      padding-left: 0;
+    /* main section */
+    .main-section{padding:40px 50px;max-width:1100px;margin:0 auto;}
+
+    /* team member blocks */
+    .member{
+      display:flex;
+      gap:22px;
+      margin-bottom:50px;
+      align-items:flex-start;
+      flex-wrap:wrap;
     }
-
-    .sidebar ul li {
-      margin: 5px 0;
+    .member img{
+      width:150px;height:150px;object-fit:cover;border-radius:4px;
     }
-
-    .sidebar a {
-      color: #165016;
-      font-weight: bold;
-      text-decoration: none;
+    .member h3{
+      margin:0;font-size:22px;color:#8b4513;
     }
-
-    .content {
-      flex: 1;
+    .member h4{
+      margin:4px 0 12px;font-size:16px;font-style:italic;color:#000;
     }
+    .member p{margin:0 0 10px;font-size:14px;max-width:700px;}
+    .member ul{margin:6px 0 0 18px;font-size:14px;}
 
-    .hero {
-      background-image: url("https://images.unsplash.com/photo-1500595046743-cd271d694e30?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80");
-      background-size: cover;
-      background-position: center;
-      color: white;
-      text-align: center;
-      padding: 60px 0;
+    /* footer date */
+    .last-modified{
+      text-align:center;
+      font-style:italic;
+      color:#444;
+      margin-top:30px;
+      font-size:13px;
     }
-
-    .hero h1 {
-      margin: 0;
-      font-size: 48px;
-      font-weight: bold;
-    }
-
-    nav {
-      background-color: #e6eed8;
-      display: flex;
-      justify-content: center;
-      padding: 10px 0;
-      font-weight: bold;
-    }
-
-    nav a {
-      color: #165016;
-      text-decoration: none;
-      margin: 0 15px;
-    }
-
-    .main-section {
-      padding: 40px;
-    }
-
-    .team-member {
-      margin-bottom: 40px;
-    }
-
-    .team-member img {
-      width: 150px;
-      float: left;
-      margin-right: 20px;
-    }
-
-    .team-member h3 {
-      font-size: 18px;
-      color: #8B4513;
-    }
-
-    .team-member h4 {
-      font-size: 16px;
-      font-style: italic;
-      color: #000000;
-    }
-
-    .team-member p,
-    .team-member ul {
-      font-size: 14px;
-      color: #000000;
-    }
-
-    .quote {
-      font-family: 'Courier New', monospace;
-      font-size: 16px;
-      color: #0000FF;
-    }
-
-    .clear {
-      clear: both;
-    }
-
-    .footer {
-      text-align: center;
-      font-size: 12px;
-      color: #333;
-      margin-top: 40px;
-      padding-bottom: 20px;
+    @media(max-width:700px){
+      .member{flex-direction:column;align-items:flex-start;}
+      .member img{width:120px;height:120px;}
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <aside class="sidebar">
+
+  <div class="wrapper">
+    <!-- ====== SIDEBAR ====== -->
+    <aside>
       <h2>Pages</h2>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="story.html">Story & History</a></li>
+        <li><a href="story.html">Story &amp; History</a></li>
         <li><a href="team.html">Management Team</a></li>
         <li><a href="products.html">Products</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="testimonials.html">Testimonials</a></li>
       </ul>
-      <hr />
-      <div>
-        <strong>Team Coltivare</strong>
-        <p><strong>Team #: </strong>11</p>
-        <p><strong>Members:</strong></p>
-        <ul>
-          <li>Morales, Wes</li>
-          <li>Osuntokun, Mide</li>
-          <li>Pike, Cooper</li>
-          <li>Pulaski, Christopher</li>
-        </ul>
-        <em>Last Modified:</em><br />
-        <script>document.write(new Date(document.lastModified).toLocaleString());</script>
-      </div>
+
+      <strong>Team Coltivare</strong>
+      <em>Team #: 11</em>
+      <ul class="team-list">
+        <li>Morales, Wes</li>
+        <li>Osuntokun, Mide</li>
+        <li>Pike, Cooper</li>
+        <li>Pulaski, Christopher</li>
+      </ul>
+
+      <em id="side-date">Last Modified:</em>
     </aside>
+
+    <!-- ====== PAGE CONTENT ====== -->
     <div class="content">
+      <!-- hero banner -->
       <header class="hero">
         <h1>Our Management Team</h1>
       </header>
 
+      <!-- nav under banner -->
       <nav>
         <a href="index.html">Home</a>
-        <a href="story.html">Story & History</a>
+        <a href="story.html">Story &amp; History</a>
         <a href="team.html">Management Team</a>
         <a href="products.html">Products</a>
         <a href="services.html">Services</a>
         <a href="testimonials.html">Testimonials</a>
       </nav>
 
-      <div class="main-section">
-        <!-- All existing team content from your original code goes here -->
-        <!-- You can paste the <div class="team-member">...</div> blocks here -->
-      </div>
+      <!-- main body -->
+      <section class="main-section">
 
-      <div class="footer">
-        Last modified: <script>document.write(document.lastModified);</script>
-      </div>
-    </div>
-  </div>
+        <!-- ==== EACH TEAM MEMBER BLOCK ==== -->
+        <div class="member">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="James Smith">
+          <div>
+            <h3>James Smith</h3>
+            <h4>Founder &amp; CEO</h4>
+            <p>James grew up on his family’s farm in Iowa and has a deep-rooted passion for agriculture. After earning an agricultural-engineering degree from <a href="https://www.purdue.edu/" target="_blank">Purdue University</a>, he <u>founded Coltivare</u> to innovate farming practices. His vision has transformed Coltivare into a leader in sustainable agriculture.</p>
+            <p style="font-family:'Courier New',monospace;font-size:18px;color:#0000ff">"Agriculture is the backbone of our world, and innovation is its future."</p>
+            <ul>
+              <li>Oversees company strategy</li>
+              <li>Drives business expansion</li>
+              <li>Speaks at industry conferences</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="member">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80" alt="Sofia Carter">
+          <div>
+            <h3>Sofia Carter</h3>
+            <h4>Chief Financial Officer</h4>
+            <p>Sofia brings <u>15 years of experience</u> in financial management, specializing in agribusiness. With an MBA from Stanford University, she safeguards Coltivare’s financial strength and growth.</p>
+            <ul>
+              <li>Financial planning &amp; budgeting</li>
+              <li>Capital-raising strategy</li>
+              <li>Risk management</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="member">
+          <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=150&q=80" alt="Rahul Patel">
+          <div>
+            <h3>Rahul Patel</h3>
+            <h4>Chief Operating Officer</h4>
+            <p>Rahul excels in operations and logistics, ensuring Coltivare delivers products efficiently. His supply-chain expertise has streamlined processes and improved sustainability.</p>
+            <ul>
+              <li>Production oversight</li>
+              <li>Logistics optimization</li>
+              <li>Eco-friendly operations</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="member">
+          <img src="lilaj.png" alt="Lila Johnson">
+          <div>
+            <h3>Lila Johnson</h3>
+            <h4>Chief Marketing Officer</h4>
+            <p>Lila is a marketing innovator connecting Coltivare with farmers worldwide. Her campaigns amplify our story and mission of sustainable agriculture.</p>
+            <ul>
+              <li>Global brand campaigns</li>
+              <li>Social-media engagement</li>
+              <li>Customer community building</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="member">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Dr Ethan Brooks">
+          <div>
+            <h3>Dr. Ethan Brooks</h3>
+            <h4>Chief Scientist</h4>
+            <p>Dr. Brooks, a PhD agronomist from Cornell University, leads Coltivare’s R&amp;D team, pioneering technology for sustainable farming.</p>
+            <ul>
+              <li>Technology development</li>
+              <li>Field research management</li>
+              <li>Scientific publications</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- last-modified footer -->
+        <p class="last-modified" id="page-date"></p>
+      </section>
+    </div><!-- /content -->
+  </div><!-- /wrapper -->
+
+  <!-- small script to stamp both dates -->
+  <script>
+    const now = document.lastModified;
+    document.getElementById('side-date').innerHTML += ' ' + now;
+    document.getElementById('page-date').textContent = 'Last modified: ' + now;
+  </script>
 </body>
 </html>
