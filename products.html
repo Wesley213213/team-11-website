@@ -1,89 +1,210 @@
-#AyomideOsuntokun.github.io
-<html> 
-  <head>
-    <title> Coltivare - Farming Products & Services </title>
-    <style>
-      body { 
-        font-family: 'Verdana', sans-serif;
-        background-color: #F6FAF3;
-        margin: 20px;
-        color: #2d3elf;
-      }
-      h1 { 
-        font-family: 'Times New Roman', serif;
-        font-size: 27px;
-        color: #2a4d14;
-      }
-      h2, h3 { 
-        font-size: 21px;
-        color: #3c763d;
-      }
-      ul, ol { 
-        margin-left: 20px;
-      } 
-      a { 
-        color: #1e5631;
-      } 
-      .highlight { 
-        font-weight: bold;
-        color: #7b2d26;
-      }
-      .product-name {
-        font-weight: bold;
-      }
-      .price {
-      text-decoration: underline;
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coltivare - Products</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f3f6ea;
     }
+
+    .container {
+      display: flex;
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: #f5f7f0;
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+      height: 100vh;
+    }
+
+    .sidebar h2,
+    .sidebar strong,
+    .sidebar em {
+      font-size: 16px;
+      color: #333;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .sidebar ul li {
+      margin: 5px 0;
+    }
+
+    .sidebar a {
+      color: #165016;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .content {
+      flex: 1;
+    }
+
+    header.hero {
+      background-image: url("grassfarm.jpg");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 60px 0;
+    }
+
+    header.hero h1 {
+      margin: 0;
+      font-size: 48px;
+      font-weight: bold;
+    }
+
+    header.hero h2 {
+      margin-top: 10px;
+      font-size: 24px;
+    }
+
+    nav {
+      background-color: #e6eed8;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: #165016;
+      text-decoration: none;
+      margin: 0 15px;
+    }
+
+    .main-section {
+      padding: 40px;
+    }
+
+    .main-section h1 {
+      font-family: 'Times New Roman', serif;
+      font-size: 27px;
+      color: #2a4d14;
+    }
+
+    .main-section h2,
+    .main-section h3 {
+      font-size: 21px;
+      color: #3c763d;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #7b2d26;
+    }
+
+    .product-name {
+      font-weight: bold;
+    }
+
     .image-gallery {
       display: flex;
       gap: 20px;
       flex-wrap: wrap;
       justify-content: center;
     }
+
     .image-gallery img {
       width: 245px;
       height: 175px;
       object-fit: cover;
     }
-    </style>
-  </head>
-  
-  <body>
-  <h1> Welcome to Coltivare's Products</h1>
-  <p><span class="highlight"> Here at Coltivare</span>, we are dedicated to providing modern farmers with innovative products that are designed to boost the productivity and sustainability of their operations. We offer all of the farming tools one might need to cultivate land and grow crops efficiently.</p> 
 
-  <h2><i>Our Featured Farming Products for You</i></h2>
-  <ol>  
-    <li><strong class="product-name">AgriDrone</strong> – Drone for crop health monitoring and pest control. <u><em>(Price:$5,200)</em></u></li>
-    <li><strong class="product-name">EcoIrrigate</strong> – An irrigation system that focuses on saving water. <u><em>(Price:$1600 per acre)</em></u></li>
-    <li><strong class="product-name">SmartSoil Sensors</strong> – Soil sensors that monitor soil health. <u><em>(Price:$400 for 1, $600 for 2)</em></u></li>
-  </ol>
+    .footer {
+      font-size: 10px;
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
 
-  <p>Here are some images of the described featured products:</p>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Pages</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="story.html">Story & History</a></li>
+        <li><a href="team.html">Management Team</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+      </ul>
+      <hr />
+      <div>
+        <strong>Team Coltivare</strong>
+        <p><strong>Team #: </strong>11</p>
+        <p><strong>Members:</strong></p>
+        <ul>
+          <li>Morales, Wes</li>
+          <li>Osuntokun, Mide</li>
+          <li>Pike, Cooper</li>
+          <li>Pulaski, Christopher</li>
+        </ul>
+        <em>Last Modified:</em><br />
+        <script>document.write(new Date(document.lastModified).toLocaleString());</script>
+      </div>
+    </aside>
+    <div class="content">
+      <header class="hero">
+        <h1>Coltivare</h1>
+        <h2>Team 11 – Purdue University</h2>
+      </header>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="story.html">Story & History</a>
+        <a href="team.html">Management Team</a>
+        <a href="products.html">Products</a>
+        <a href="services.html">Services</a>
+        <a href="testimonials.html">Testimonials</a>
+      </nav>
+      <div class="main-section">
+        <h1>Welcome to Coltivare's Products</h1>
+        <p><span class="highlight">Here at Coltivare</span>, we are dedicated to providing modern farmers with innovative products that are designed to boost the productivity and sustainability of their operations. We offer all of the farming tools one might need to cultivate land and grow crops efficiently.</p>
 
-  <div class="image-gallery">
-    <img src="https://www.croptracker.com/images/blog/10_Emerging_AgTech_Innovations/sprayer_drone500.jpg" alt="Sprayer Drone">
-    <img src="https://www.aces.edu/wp-content/uploads/2019/04/IMG_20180503_164640-e1646261150180-600x246.jpg" alt="Center Pivot Irrigation Alabama">
-    <img src="https://www.azolifesciences.com/images/Article_Images/ImageForArticle_983_16685257223166236.jpg" alt="Agriculture Sensors">
+        <h2><i>Our Featured Farming Products for You</i></h2>
+        <ol>
+          <li><span class="product-name">AgriDrone</span> – Drone for crop health monitoring and pest control. <u><em>(Price:$5,200)</em></u></li>
+          <li><span class="product-name">EcoIrrigate</span> – An irrigation system that focuses on saving water. <u><em>(Price:$1600 per acre)</em></u></li>
+          <li><span class="product-name">SmartSoil Sensors</span> – Soil sensors that monitor soil health. <u><em>(Price:$400 for 1, $600 for 2)</em></u></li>
+        </ol>
+
+        <p>Here are some images of the described featured products:</p>
+        <div class="image-gallery">
+          <img src="https://www.croptracker.com/images/blog/10_Emerging_AgTech_Innovations/sprayer_drone500.jpg" alt="Sprayer Drone">
+          <img src="https://www.aces.edu/wp-content/uploads/2019/04/IMG_20180503_164640-e1646261150180-600x246.jpg" alt="Center Pivot Irrigation Alabama">
+          <img src="https://www.azolifesciences.com/images/Article_Images/ImageForArticle_983_16685257223166236.jpg" alt="Agriculture Sensors">
+        </div>
+
+        <h3><i>Why Choose Our Products</i></h3>
+        <ul>
+          <li>We have advanced technology that promotes environmental sustainability</li>
+          <li>Cost-friendly products that are still of great quality</li>
+          <li>Instructions on how to use each product are always provided</li>
+          <li>At Coltivare customer safety is our #1 priority so our machines are tailored towards the latest safety regulations</li>
+          <li>Products can be customized for any type of farm by our product developers from Purdue University</li>
+        </ul>
+
+        <p>We hope you enjoy your experience with our products and we look forward to seeing you again shopping with us!</p>
+        <p><a href="https://www.coltivare.com" target="_blank">Visit Coltivare Shop to view products and prices</a></p>
+        <p><a href="mailto:fakeemail@purdue.edu">Contact Me and our Department</a></p>
+        <p><a href="coltivare_brochure.pdf" download>Download our brochure that includes more info about us</a></p>
+        <p class="footer"><em>Last modified: <script>document.write(new Date(document.lastModified).toLocaleString());</script></em></p>
+      </div>
+    </div>
   </div>
-
-
-  <h3><i>Why Choose Our Products</i></h3>
-  <ul>
-    <li>We have advanced technology that promotes environmental sustainability</li>
-    <li>Cost‑friendly products that are still of great quality</li>
-    <li>Instructions on how to use each product are always provided</li>
-    <li>At Coltivare customer saftey is our #1 priority so our machines are tailored towards the latest safey regulations </li>
-    <li>Products can be customized for any type of farm by our product developers from Purdue University</li>
-  </ul>
-
-<p> Lastly, we want to say that we want to ensure that our customers find what they need at a reasonable and conscious price while also ensuring knowledge and safety requirements are met for each product we offer. We hope you enjoy your experience with our products and we look foward to seeing you again shopping with us!</p>
-    
-  <p><a href="https://www.coltivare.com" target="_blank">Visit Coltivare Shop to view products and prices</a></p>
-    
-  <p><a href="mailto:contact@coltivare-products.com">Contact Me and our Department</a></p>
-    
-  <p><a href="coltivare_brochure.pdf" download>Download our brochure that includes more info about us</a></p>
-    
-  <p style="font-size:10px;"><script>document.write("Date last modified: " + document.lastModified);</script></p>
 </body>
+
+</html>
